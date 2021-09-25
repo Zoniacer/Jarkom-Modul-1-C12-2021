@@ -64,6 +64,7 @@ mysql.query matches insert<br>
 ![image](https://user-images.githubusercontent.com/63639703/134768327-8037d881-77fb-493a-a6d2-0072544cb289.png)
 
 <br>
+
 ##### 6. Cari username dan password ketika melakukan login ke FTP Server!
 Jawab
 > Wireshark filter expression: ftp.request.command == USER || ftp.request.command == PASS
@@ -95,10 +96,10 @@ Jawab
 
 ##### 8. Cari paket yang menunjukan pengambilan file dari FTP tersebut!
 Jawab
-> Wireshark filter expression: ftp.response.code == 150 || ftp.response.code == 226
+> Wireshark filter expression: ftp.request.command == RETR
 
-<img src="https://user-images.githubusercontent.com/73422724/134753586-8924ac48-99b3-471f-be0e-4b6a57918fa5.png" width="500">
-^ Gambar 8 Memasukkan filter frame contains "ftp.response.code == 150 || ftp.response.code == 226"
+<img src="https://user-images.githubusercontent.com/73422724/134769805-67d393da-6fb2-4b2e-b4ec-d329770305da.png" width="500">
+^ Gambar 8 Memasukkan filter frame contains "ftp.request.command == RETR"
 
 ##### 9. Dari paket-paket yang menuju FTP terdapat indikasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
 Jawab
