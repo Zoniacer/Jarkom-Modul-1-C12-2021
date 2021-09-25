@@ -132,23 +132,38 @@ Didapat password : d1b1langbukanapaapajugagapercaya
 ^ Gambar 10.3 Tampilan Wanted.pdf yang ada dalam secret.zip
 
 
-11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80! 
+##### 11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80! 
 Jawab
-src port 80
+> src port 80
 
-12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
-Jawab
-port 21
+![jarkom-p1-11](https://user-images.githubusercontent.com/81344394/134770976-200b7be3-71b7-4f2c-8a70-ad64ce8eb3de.png)
 
-13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
+##### 12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 Jawab
-tcp port 443
+> port 21
 
-14. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
-Jawab
-dst host kemenag.go.id
+![jarkom-p1-12](https://user-images.githubusercontent.com/81344394/134770971-41a028c8-330a-4176-a21b-50ea9ebeb482.png)
 
-15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+##### 13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 Jawab
-src host <ip address>
+> dst port 443
+
+![jarkom-p1-13](https://user-images.githubusercontent.com/81344394/134770982-3c6b66ae-ddd9-4d96-86a3-6932205e614a.png)
+
+##### 14. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
+Jawab
+> dst host kemenag.go.id
+
+![jarkom-p1-14](https://user-images.githubusercontent.com/81344394/134770979-a20efe78-13b6-4b40-9a45-af8ce9b7f44a.png)
+
+##### 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+Jawab
+> src host <ip address>
+
+![jarkom-p1-15](https://user-images.githubusercontent.com/81344394/134770977-378c1fbb-8575-4995-93d5-00cca1e39c4f.png)
+
+
+
+
+
 
