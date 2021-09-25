@@ -7,33 +7,63 @@ Shidqi Dhaifullah - 05111940000108
 
 ### PRAKTIKUM MODUL 1
 
-1. Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
-Jawab
-http.host == ichimarumaru.tech
-nginx/1.18.0 (Ubuntu)
+1. Sebutkan webserver yang digunakan pada "ichimarumaru.tech"!<br>
+Jawab: <br>
+Dapat dilakukan dengan memasuki filter expression sebagai berikut:<br>
+http.host == ichimarumaru.tech<br>
 
-2. Temukan paket dari web-web yang menggunakan basic authentication method!
-Jawab
-http.authbasic
+![image](https://user-images.githubusercontent.com/63639703/134767879-053e0059-6aac-431e-8570-5f1b461b638f.png)
 
-3. Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
-Jawab
-http.host == basic.ichimarumaru.tech
+<br>Lalu klik kanan, klik follow dan klik tcp stream<br> 
 
+![image](https://user-images.githubusercontent.com/63639703/134767914-3521aefe-0a56-4c94-9601-48a1621c55ee.png)
 
+<br>Kemudian ini hasilnya<br>
 
+![image](https://user-images.githubusercontent.com/63639703/134767835-a3931bee-49a4-4cb1-b973-6a710ad6058b.png)
 
-4. Temukan paket mysql yang mengandung perintah query select!
-Jawab
-mysql.query matches select
+<br>nginx/1.18.0 (Ubuntu)<br>
+2. Temukan paket dari web-web yang menggunakan basic authentication method!<br>
+Jawab: <br>
+Dapat dilakukan dengan memasuki filter expression sebagai berikut:<br>
+http.authbasic<br>
+![image](https://user-images.githubusercontent.com/63639703/134768090-edc81f6c-b020-4b39-804b-3cc8361e0b89.png)
+<br>3. Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!<br>
+Jawab<br>
+Dapat dilakukan dengan memasuki filter expression sebagai berikut:<br>
+http.host == basic.ichimarumaru.tech<br>
 
+![image](https://user-images.githubusercontent.com/63639703/134768182-2c18e46d-0e02-4e5b-a348-4711e49cfeb2.png)
 
-5. Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!
-Jawab
-mysql.query matches insert
+<br>Setelah itu bisa dicari dalam salah satu paket ada authentication yang berisi username dan password, dapat dimasukkan kedalam website dan mendapatkan hasil berikut:<br>
 
-Username = akakanomi, password pemisah4lautan
+![image](https://user-images.githubusercontent.com/63639703/134768254-fa80a414-9ce7-4cf5-8b50-c874ea3f829b.png)
 
+<br>
+4. Temukan paket mysql yang mengandung perintah query select!<br>
+Jawab:<br>
+Dapat dilakukan dengan memasuki filter expression sebagai berikut:<br>
+mysql.query matches select<br>
+
+![image](https://user-images.githubusercontent.com/63639703/134768288-3e08a277-651f-4b21-b7a0-5711e864087a.png)
+
+<br>Dapat dilihat paket - paket berisi select<br>
+5. Login ke portal.ichimarumaru.tech kemudian ikuti perintahnya! Username dan password bisa didapat dari query insert pada table users dari file .pcap!<br>
+Jawab<br>
+Dapat dilakukan dengan memasuki filter expression sebagai berikut:<br>
+mysql.query matches insert<br>
+
+![image](https://user-images.githubusercontent.com/63639703/134768365-1d87825d-5719-489e-9391-e19dcec95305.png)
+
+<br>Kemudian bisa dilihat username dan password<br>
+
+![image](https://user-images.githubusercontent.com/63639703/134768315-5fd48925-88d4-4b1a-9c71-dd2b803c51d7.png)
+
+<br>didapatkan Username = akakanomi, password pemisah4lautan<br>
+
+![image](https://user-images.githubusercontent.com/63639703/134768327-8037d881-77fb-493a-a6d2-0072544cb289.png)
+
+<br>
 ##### 6. Cari username dan password ketika melakukan login ke FTP Server!
 Jawab
 > Wireshark filter expression: ftp.request.command == USER || ftp.request.command == PASS
