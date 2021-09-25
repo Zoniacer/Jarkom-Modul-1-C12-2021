@@ -158,7 +158,7 @@ Jawab
 
 ##### 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 Jawab
-> src host <ip address>
+> src host \<ip address\>
 
 ![jarkom-p1-15](https://user-images.githubusercontent.com/81344394/134770977-378c1fbb-8575-4995-93d5-00cca1e39c4f.png)
 
